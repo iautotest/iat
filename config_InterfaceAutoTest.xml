@@ -1,0 +1,38 @@
+<Config>
+	<!-- 测试环境配置 -->
+	<HOST>被测URL</HOST>
+	<ClientKey></ClientKey>
+	<TradingAccountId></TradingAccountId>
+ 	<IsDebug>0</IsDebug>
+ 	<Loglevel>DEBUG</Loglevel>
+ 		
+	<!-- 
+		代理地址，调试用，非必选
+		若要调试，则将 noproxy设置成0，否则设置成1
+		本人是使用fiddler做为代理，调试报文
+	 -->
+	<Proxy>
+		<ignoreproxy>0</ignoreproxy>
+		<proxyHost>127.0.0.1</proxyHost>
+		<proxyPort>8887</proxyPort>
+		<userName></userName>
+		<password> </password>
+	</Proxy>
+	
+	<!-- Case所在数据库配置 -->
+	<CaseDB>
+		<CaseDB_HOST>jdbc:mysql://127.0.0.1:3306/test</CaseDB_HOST>
+		<CaseDB_jdbcName>com.mysql.jdbc.Driver</CaseDB_jdbcName>
+		<CaseDB_DBUser>test</CaseDB_DBUser>
+		<CaseDB_DBPWD>123456</CaseDB_DBPWD>
+	</CaseDB>
+	
+	<!-- 被测环境数据库配置 -->
+	<BusinessDB>		
+		<BusinessDB_HOST>jdbc:mysql://192.168.1.60:3306/caishuo</BusinessDB_HOST>
+		<BusinessDB_jdbcName>com.mysql.jdbc.Driver</BusinessDB_jdbcName>
+		<BusinessDB_DBUser>BusinessDB</BusinessDB_DBUser>
+		<BusinessDB_DBPWD>123456</BusinessDB_DBPWD>
+	</BusinessDB>
+	
+</Config>
